@@ -1,0 +1,40 @@
+
+#inputArea {
+    padding: 5px;
+    margin: 5px;
+
+    width: 100px;
+    /* align-items: center; */
+/* justify-items: center; */
+}
+
+#list {
+   
+    box-sizing: border-box;
+   
+}
+
+table, th, td {
+    border: 0.5px solid black;
+    box-sizing: border-box;  
+    border-collapse: collapse;
+    padding: 1px;
+    text-align: center;
+}
+
+.inputDate {
+    width: 92px;
+}
+
+.dueDate {
+    width: 91px;
+}
+
+.task {
+    width: 400px;
+}
+
+
+.completnes {
+    width: 50px;
+}

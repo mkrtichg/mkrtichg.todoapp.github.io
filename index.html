@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  
+    <div id="inputArea">
+        <textarea name="text" id="textarea" cols="30" rows="10"></textarea>
+        <input type="text" id="endDate" placeholder="Due Date 2000 Jan 01" value="">
+        <input type="button" id="inputButton" value="Submit">
+    </div>
+    <table id="list">
+        <tr id="header">
+            <th class="inputDate">Created date</th>
+            <th class="dueDate">Due date</th>
+            <th class="task">ToDo</th>
+            <th class="completnes">State</th>
+            <!-- <th class="completnes">Confir</th> -->
+        </tr>
+    </table>
+    <script src="./script.js"></script>
+</body>
+
+</html>
