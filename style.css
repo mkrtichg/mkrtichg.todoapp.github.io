@@ -1,15 +1,39 @@
 
 
 body {
-    background-image: url('./Images/ToDoLists.jpg');
+      
     align-items: center;
     align-content: center;
     justify-content: center;
     justify-items: center;
 }
+#carousel {
+    display: flex;
+    height: 200px;
+}
+
+#images {
+    flex: 4;
+    height: 200px;
+}
+#left, #right {
+    flex: 1;
+    width: 100px;
+    height: 200px;
+}
+
+#task {
+    display: flex;
+    height: 60vh;
+    background-image: url('./Images/ToDoLists.jpg');
+
+}
+
+
 #inputArea {
     padding: 5px;
     margin: 5px;
+    flex: 1;
 
     width: 100px;
     /* align-items: center; */
@@ -17,9 +41,15 @@ body {
 }
 
 #list {
-    
+    flex: 4;
+    /* margin: 10px;
+    padding: 10px; */
     box-sizing: border-box;
    
+}
+
+table{
+    margin: 10px;
 }
 
 table, th, td {
@@ -30,8 +60,14 @@ table, th, td {
     text-align: center;
 }
 
+th {
+    height: 20px;
+}
+
+
 .inputDate {
     width: 92px;
+    /* height: 20px; */
 }
 
 .dueDate {
@@ -39,10 +75,17 @@ table, th, td {
 }
 
 .task {
-    width: 400px;
+    
+    width: 200px;
+    
 }
 
 
 .completnes {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
     width: 50px;
 }
+
