@@ -1,4 +1,12 @@
 
+
+body {
+    background-image: url('./Images/ToDoLists.jpg');
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
 #inputArea {
     padding: 5px;
     margin: 5px;
@@ -9,7 +17,7 @@
 }
 
 #list {
-   
+    
     box-sizing: border-box;
    
 }
