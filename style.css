@@ -1,27 +1,98 @@
-
-
 body {
-      
+
     align-items: center;
     align-content: center;
     justify-content: center;
     justify-items: center;
 }
+
+
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ToDo carousel */
+
+
 #carousel {
+    background-color: darkturquoise;
     display: flex;
-    height: 200px;
+    height: 210px;
 }
 
 #images {
-    flex: 4;
-    height: 200px;
-}
-#left, #right {
+    /* background-color:aliceblue; */
+    display: flex;
     flex: 1;
-    width: 100px;
-    height: 200px;
+    height: 180px;
+    align-items: center;
+    align-content: center;
 }
 
+#rightBTN,
+#leftBTN {
+    height: 180px;
+    background-color: rgba(0, 206, 209, 90);
+    border: unset
+}
+
+#leftBTN {
+    
+    align-self: flex-end;
+}
+
+
+/* .images{
+    flex: 1;
+    height: 190px;
+} */
+
+.hidden {
+    display: none;
+}
+
+#img1,
+#img2,
+#img3,
+#img4,
+#img5 {
+
+    flex: 1;
+    height: 180px;
+
+}
+
+#left,
+#right {
+    flex: 2;
+    width: 100px;
+    height: 200px;
+    /* background-color: deepskyblue; */
+}
+
+#left {
+    align-items: end;
+}
+
+#play_pause {
+    background-color: rgba(0, 206, 209, 90);   
+    border: unset;
+    /* font-size: medium; */
+    height: 10px;
+    /* margin-top: 1px; */
+    padding-top: 10px;
+    /* z-index: 1; */
+}
+
+#playPause{
+    background-color: rgba(0, 206, 209, 90);   
+    border: unset;
+    font-size: smaller;
+    height: 15px;
+    margin-top: 1px;
+  
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ToDo section */
 #task {
     display: flex;
     height: 60vh;
@@ -37,7 +108,7 @@ body {
 
     width: 100px;
     /* align-items: center; */
-/* justify-items: center; */
+    /* justify-items: center; */
 }
 
 #list {
@@ -45,16 +116,18 @@ body {
     /* margin: 10px;
     padding: 10px; */
     box-sizing: border-box;
-   
+
 }
 
-table{
+table {
     margin: 10px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 0.5px solid black;
-    box-sizing: border-box;  
+    box-sizing: border-box;
     border-collapse: collapse;
     padding: 1px;
     text-align: center;
@@ -75,9 +148,9 @@ th {
 }
 
 .task {
-    
+
     width: 200px;
-    
+
 }
 
 
@@ -88,4 +161,3 @@ th {
 
     width: 50px;
 }
-

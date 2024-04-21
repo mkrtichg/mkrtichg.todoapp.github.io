@@ -1,9 +1,164 @@
 
 
+
+
+// debugger;
+
+
+//Carousel section
+
+const imageArea = document.getElementById('images');
+const img1 = document.getElementById('img1');
+const img2 = document.getElementById('img2');
+const img3 = document.getElementById('img3');
+const img4 = document.getElementById('img4');
+const img5 = document.getElementById('img5');
+const leftBTN = document.getElementById('leftBTN');
+const rightBTN = document.getElementById('rightBTN');
+const playPauseBTN = document.getElementById('playPause');
+
+img1.classList.add('hidden');
+img2.classList.add('hidden');
+img3.classList.add('hidden');
+img4.classList.add('hidden');
+img5.classList.add('hidden');
+let currentSlide = img5;
+currentSlide.classList.remove('hidden');
+
+
+let nextSlide;
+let previousSlide;
+
+const s = 1500;
+let i = 0;
+let timerID;
+
+
+playPauseBTN.addEventListener('click', () => {
+
+    if (timerID) {
+        clearInterval(timerID);
+        playPauseBTN.value = "Play";
+        timerID = null;
+
+    } else {
+        playPauseBTN.value = "Pause";
+        timerID = setInterval(() => slideShow(), s);
+
+    }
+
+
+    imageArea.addEventListener('mousemove', () => {
+       if(playPauseBTN.value === "Pause"){
+        clearInterval(timerID);
+        timerID = null;
+       }
+    });
+
+    imageArea.addEventListener('mouseleave', () => {
+        if(playPauseBTN.value === "Pause"){
+            timerID = setInterval(() => slideShow(), s);
+        }
+
+
+    });
+
+
+
+
+    // playPauseBTN.addEventListener('click', () =>{
+    //     clearInterval(timerId);
+    // })
+
+})
+
+
+
+leftBTN.addEventListener('click', () => {
+    // debugger;
+
+    slide();
+    iDecrement();
+
+})
+
+rightBTN.addEventListener('click', () => {
+
+    // debugger;
+    slide();
+    iIncrement();
+
+})
+
+
+
+function slideShow() {
+    // debugger;
+    slide();
+    iIncrement();
+}
+
+
+function slide() {
+
+    currentSlide.classList.remove('hidden');
+    previousSlide = currentSlide;
+    previousSlide.classList.add('hidden');
+    switch (i) {
+        // case 0:
+        //     currentSlide = img1;
+        //     break;
+        case 1:
+            currentSlide = img2;
+            break;
+        case 2:
+            currentSlide = img3;
+            break;
+        case 3:
+            currentSlide = img4;
+            break;
+        case 4:
+            currentSlide = img5;
+            break;
+
+        default:
+            currentSlide = img1;
+            break;
+    }
+
+
+    currentSlide.classList.remove('hidden');
+}
+
+
+function iIncrement() {
+    if (i === 4) {
+        return i = 0
+    } else {
+        return i++
+    }
+}
+
+function iDecrement() {
+    if (i === 0) {
+        return i = 4
+    } else {
+        return i--
+    }
+}
+
+
+
+//  -----------------------------------------------------------------------------------------------------------------------------------
+
+// ToDo list section
+
+
 const table = document.getElementById('list');
 const button = document.getElementById('inputButton');
 const inpText = document.getElementById('textarea');
 const taskDate = document.getElementById('endDate');
+
 
 
 button.addEventListener("click", () => {
@@ -52,8 +207,8 @@ button.addEventListener("click", () => {
 
     table.append(tableRow);
 
-    if(!completnes.isDone){
-        notDoneImg.addEventListener("click",()=>{
+    if (!completnes.isDone) {
+        notDoneImg.addEventListener("click", () => {
             completnes.isDone = true
             doneImg = document.createElement('img');
             notDoneImg.src = "./Images/checkMarkWithRing.png";
@@ -103,3 +258,10 @@ function parseDay(arg) {
     return toDay = `${year} ${month} ${day}`;
 
 }
+
+
+
+
+
+
+
