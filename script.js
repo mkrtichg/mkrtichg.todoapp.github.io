@@ -50,7 +50,7 @@ playPauseBTN.addEventListener('click', () => {
 
     imageArea.addEventListener('mousemove', () => {
        if(playPauseBTN.value === "Pause"){
-        clearInterval(timerID);
+        clearInterval(timerID);j
         timerID = null;
        }
     });
@@ -214,6 +214,7 @@ button.addEventListener("click", () => {
             notDoneImg.src = "./Images/checkMarkWithRing.png";
             notDoneImg.alt = "checkMarkWithRing"
             notDoneImg.style = "width: 30%";
+            tableRow.style.textDecoration = "line-through"
         })
     }
 
